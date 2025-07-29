@@ -37,7 +37,7 @@ This project uses **MySQL** to explore and analyze Netflix's global content cata
 - ✅ **Strategic Communication of Results**
 
 ---
-## 🔧 Data Cleaning
+## 🔧 Data Cleaning,Exploratory Data Analysis (EDA),Business Insights & Recommendations
 
 To prepare the dataset for analysis, missing values were handled using `UPDATE` queries:
 
