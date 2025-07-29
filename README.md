@@ -24,8 +24,9 @@ This project explores the Netflix Movies and TV Shows dataset using **SQL**. The
 
 ---
 
-##  Data Cleaning
+##  Data Cleaning,Exploratory Data Analysis (EDA),Business Insights & Recommendations
 
+##  Data Cleaning
 To prepare the dataset for analysis, missing values were handled using `UPDATE` queries:
 
 ```sql
