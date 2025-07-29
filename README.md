@@ -1,32 +1,44 @@
-
 # 🎬 Netflix SQL Data Analysis Project
 
-This project explores the Netflix Movies and TV Shows dataset using **SQL**. The goal is to clean the data, explore key trends, and extract **business insights** that help explain **why certain patterns exist**, not just what they are.
+This project uses **MySQL** to explore and analyze Netflix's global content catalog with a focus on uncovering **actionable business insights**. The analysis helps answer **strategic questions** such as:  
+- Why is TV content rising?
+- What countries dominate Netflix's catalog?
+- Which genres and ratings are most common?
+- How is movie duration changing over time?
+
+---
+
+## 📌 Project Objectives
+
+- Clean and prepare real-world data using SQL
+- Perform exploratory data analysis (EDA) on Netflix content
+- Uncover trends in content types, ratings, duration, genres, and geography
+- Generate **business-focused insights** and **actionable recommendations**
+- Showcase **SQL, problem-solving, and data storytelling** skills
+
+---
+
+## 📁 Dataset Overview
+
+- **Source:** [Kaggle - Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+- **Size:** 8,800+ records
+- **Key Fields:** `title`, `type`, `release_year`, `country`, `rating`, `duration`, `listed_in`, `description`
 
 ---
 
 ## 🧠 Skills Demonstrated
 
-- Problem Solving & Critical Thinking
-- Data Cleaning using SQL
-- Exploratory Data Analysis (EDA)
-- Business Insight Generation
-- Data-Driven Storytelling
-- Communication with SQL comments and insights
+- ✅ **Problem Solving**  
+- ✅ **Data Cleaning with SQL** (`UPDATE`, `IS NULL`, `TRIM`)
+- ✅ **Exploratory Data Analysis (EDA)** using `SELECT`, `GROUP BY`, `COUNT`, `AVG`
+- ✅ **Business Insight Generation**
+- ✅ **Data-Driven Storytelling**
+- ✅ **Clear SQL Query Documentation**
+- ✅ **Strategic Communication of Results**
 
 ---
+## 🔧 Data Cleaning
 
-## 📁 Dataset Information
-
-- **Source:** [Kaggle – Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
-- **Records:** 8,800+ titles
-- **Columns:** Title, Type, Country, Director, Cast, Rating, Release Year, Duration, Genres, Description
-
----
-
-##  Data Cleaning,Exploratory Data Analysis (EDA),Business Insights & Recommendations
----
-##  Data Cleaning
 To prepare the dataset for analysis, missing values were handled using `UPDATE` queries:
 
 ```sql
@@ -49,9 +61,7 @@ UPDATE netflix_titles
 SET rating = 'Not Rated'
 WHERE rating IS NULL OR TRIM(rating) = '';
 
-Why: Missing values can interfere with grouping and filtering. Replacing them with "Unknown" or "Not Rated" ensures consistency.
 ---
-
 ## 📊 Exploratory Data Analysis (EDA)
 
 After cleaning the dataset, exploratory analysis was performed using SQL to identify patterns and answer key business questions.
@@ -66,6 +76,16 @@ After cleaning the dataset, exploratory analysis was performed using SQL to iden
 - ⏱️ **Duration Trends:** Measured how average movie length has changed over time
 
 > All queries used in the analysis are included in the [`netflix_analysis.sql`](./sql/netflix_analysis.sql) file.
+
+### 🔍 Sample EDA Query
+
+```sql
+-- Count of titles by year and type (TV or Movie)
+SELECT release_year, type, COUNT(*) AS count
+FROM netflix_titles
+GROUP BY release_year, type
+ORDER BY release_year, type;
+
 ---
 
 ## 📌 Business Insights & Recommendations
@@ -80,10 +100,7 @@ The following insights were derived from SQL exploratory analysis and are aimed 
 | 4            | Movie durations are shrinking (under 90 minutes)                  | Promote short-form content and explore anthology/short-documentary formats        |
 | 5            | Drama, Documentaries, and Comedies dominate the genre catalog     | Diversify into underrepresented genres such as Sci-Fi, Fantasy, and Action        |
 
-
-> All queries used in the analysis are included in the [`netflix_analysis.sql`](./sql/netflix_analysis.sql) file.
-
-
+---
 ## 📌 Summary
 
 This project demonstrates how SQL can be used to:
@@ -92,12 +109,12 @@ This project demonstrates how SQL can be used to:
 - ✅ Explore and extract actionable insights
 - ✅ Answer **why** business trends occur
 - ✅ Support strategic content decisions for media platforms like Netflix
-
+---
 ## 📬 Contact
 
 If you’d like to connect, collaborate, or learn more:
 
-- **Name:** Gilbert Karani Muzungu  
-- **Email:** gilbertmuzungu64@gmail.com    
-- **LinkedIn:** [https://www.linkedin.com/in/gilbert/karani]
-
+- **Name:** Gilbert karaniMuzungu 
+- **Email:** gilbertmuzungu64@gmail.com  
+- **LinkedIn:** [https://www.linkedin.com/in/gilbert/karani ]
+---
