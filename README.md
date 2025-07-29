@@ -25,7 +25,7 @@ This project explores the Netflix Movies and TV Shows dataset using **SQL**. The
 ---
 
 ##  Data Cleaning,Exploratory Data Analysis (EDA),Business Insights & Recommendations
-
+---
 ##  Data Cleaning
 To prepare the dataset for analysis, missing values were handled using `UPDATE` queries:
 
@@ -50,7 +50,7 @@ SET rating = 'Not Rated'
 WHERE rating IS NULL OR TRIM(rating) = '';
 
 Why: Missing values can interfere with grouping and filtering. Replacing them with "Unknown" or "Not Rated" ensures consistency.
-
+---
 
 ## 📊 Exploratory Data Analysis (EDA)
 
@@ -66,7 +66,7 @@ After cleaning the dataset, exploratory analysis was performed using SQL to iden
 - ⏱️ **Duration Trends:** Measured how average movie length has changed over time
 
 > All queries used in the analysis are included in the [`netflix_analysis.sql`](./sql/netflix_analysis.sql) file.
-
+---
 
 ## 📌 Business Insights & Recommendations
 
